@@ -2,7 +2,7 @@ package gun
 
 import "fmt"
 
-// Gunner is the interface that creates a gun.
+// Gunner is the interface that handles a gun.
 type Gunner interface {
 	SetName(name string)
 	SetPower(power int)
