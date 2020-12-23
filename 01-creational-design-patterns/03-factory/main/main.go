@@ -6,21 +6,20 @@ import (
 	"strings"
 
 	"github.com/andreasatle/go-design-patterns/01-creational-design-patterns/03-factory/gun"
-	"github.com/andreasatle/go-design-patterns/01-creational-design-patterns/03-factory/gunfactory"
 )
 
 func main() {
-	ak47, err := gunfactory.GetGun("ak47")
+	ak47, err := gun.GetGun("ak47")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	maverick, err := gunfactory.GetGun("maverick")
+	maverick, err := gun.GetGun("maverick")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	foo, err := gunfactory.GetGun("foo")
+	foo, err := gun.GetGun("foo")
 	if err != nil {
 		log.Printf("This error should occur: %v\n", err)
 	}

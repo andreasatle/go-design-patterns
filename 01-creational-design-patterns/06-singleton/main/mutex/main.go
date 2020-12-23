@@ -1,3 +1,4 @@
+// Package main repeatedly calls mutex.GetInstance()
 package main
 
 import (
