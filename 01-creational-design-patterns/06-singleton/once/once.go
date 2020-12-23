@@ -1,3 +1,8 @@
+// Package mutex contains a thread-safe implementation of
+// a singleton instance using sync.Mutex.
+//
+// We use the package variable once (sync.Once) to guarantee
+// that the singleton instance is created exactly once.
 package once
 
 import (
@@ -12,6 +17,8 @@ type Single struct {
 
 var singleInstance *Single
 
+// GetInstance returns a pointer to the singleton instance.
+// The instance is created if it is not already initialized.
 func GetInstance() *Single {
 	if singleInstance != nil {
 		fmt.Println("Single Instance already created.")

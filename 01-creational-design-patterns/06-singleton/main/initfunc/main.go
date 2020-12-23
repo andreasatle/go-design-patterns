@@ -1,3 +1,4 @@
+// Package main repeatedly calls initfunc.GetInstance()
 package main
 
 import (
