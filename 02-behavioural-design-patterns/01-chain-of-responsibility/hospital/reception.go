@@ -22,3 +22,14 @@ func (r *Reception) Execute(p *Patient) {
 func (r *Reception) SetNext(next Department) {
 	r.next = next
 }
+
+func NewReception() *Reception {
+	cashier := &Cashier{}
+	medical := &Medical{}
+	medical.SetNext(cashier)
+	doctor := &Doctor{}
+	doctor.SetNext(medical)
+	reception := &Reception{}
+	reception.SetNext(doctor)
+	return reception
+}
